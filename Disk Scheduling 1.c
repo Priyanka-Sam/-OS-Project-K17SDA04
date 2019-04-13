@@ -1,10 +1,15 @@
-#include<stdio.h>
-#include<unistd.h>
+#include<iostream>
+#include<stdlib.h>
+#include<math.h>
+using namespace std;
 
-void main(){
-			int total_dist=0;
-			int current=143;
-			int previous=125;
-			int queue[] = {86, 1470, 913, 1774, 948, 1509, 1022, 1750, 130};
-			
-			}
+class sstf
+{
+int queue[10];
+int current,size;
+int nearest(int);
+	public:
+void getdata();
+void move();
+	};
+
