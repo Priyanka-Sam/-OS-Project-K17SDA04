@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+struct process
+{
+	int at,bt,pr,ct,ta,wt,pid;
+
+	/*
+	at = Arrival time
+	bt = Burst time
+	ct = Completion time
+	ta = Turn around time
+	wt = Waiting time
+	pr = priority
+   pid = process id 
+	*/
+
+}proc[5];
+
