@@ -17,3 +17,14 @@ struct process
 
 }proc[5];
 
+bool compare(process a,process b) 
+{ 
+if(a.at == b.at) 
+{ 
+return a.pr<b.pr; 
+} 
+else
+{ 
+    return a.at<b.at; 
+} 
+} 
