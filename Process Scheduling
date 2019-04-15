@@ -1,30 +1,56 @@
 #include<iostream>
+#include<stdlib.h>
 using namespace std;
 
-struct process
+//int swapFunc(int[]);
+
+int main()
 {
-	int at,bt,pr,ct,ta,wt,pid;
+	int at[5],bt[5],pr[5],ct[5],tat[5],wt[5],proc[5];
+	float total_wt,total_tat;
+	int n;
+	
+	cout<<"--------------------------------------------------"<<endl;
+	//get the number of processes	
+	cout<<"Enter the number of Processes -> "<<endl;
+	cin>>n;
+	//giving process IDs to Processes
+	for(i=0;i<n;i++)
+	{
+		proc[i]=i+1;
+	}
+	
+	
+	cout<<"--------------------------------------------------"<<endl;
+	//Get the Arrival Time and Burst Time 
+	cout<<"Enter the Arrival Time for Processes -> "<<endl;
+	
+	for(i=0;i<n;i++)
+	{
+		if(at[i]>=0)
+		cin>>at[i];
+		else
+		cout<<"Wrong Arrival Time!"<<endl<<"Please enter Correct Arrival Time."<<endl;
+	}
 
-	/*
-	at = Arrival time
-	bt = Burst time
-	ct = Completion time
-	ta = Turn around time
-	wt = Waiting time
-	pr = priority
-   pid = process id 
-	*/
+	//Burst Time
+	cout<<"--------------------------------------------------"<<endl;
+	cout<<"Enter the Burst Time for Processes -> "<<endl;
+	for(i=0;i<n;i++)
+	{
+		if(at[i]>=0)
+		cin>>at[i];
+		else
+		cout<<"Wrong Burst Time!"<<endl<<"Please enter Correct Burst Time."<<endl;
+	}
+	cout<<"--------------------------------------------------"<<endl;
 
-}proc[5];
-
-bool compare(process a,process b) 
-{ 
-if(a.at == b.at) 
-{ 
-return a.pr<b.pr; 
-} 
-else
-{ 
-    return a.at<b.at; 
-} 
-} 
+    //calculating Total Burst Time
+    
+    for(i=0;i<n;i++)
+    {
+    	total_bt += bt[i];
+	}
+    cout<<"Total Burst Time -> "<<total_bt;
+    }
+    
