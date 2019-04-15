@@ -26,3 +26,21 @@ cout<<"Enter the current position of head ";
     //86,1470,913,948,1774,1509,1022,1750,130
 }
 
+int sstf::nearest(int cur)
+    {
+    	int min = 99999,index,var;
+    	for(int i=0;i<size;i++)
+    	{
+		if(queue[i]!=-1)
+    	  {
+    	  	var = abs(cur - queue[i]);
+    		if(min>var)
+    		{
+    			min=var;
+    			index=i;
+			}
+		  }
+		}
+		return index;
+	}
+	
