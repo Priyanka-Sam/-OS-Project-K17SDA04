@@ -44,3 +44,25 @@ int sstf::nearest(int cur)
 		return index;
 	}
 	
+	void sstf::move()
+	{
+		int cur = current;
+		int total_dist=0;
+		int index;
+		for(int i =0;i<size;i++)
+		{
+			index=nearest(cur);
+			total_dist += abs(cur - queue[index]);
+			cur = queue[index];
+			queue[index] = -1;
+		}
+		cout<<"Total Movement using SSTF -> "<<total_dist;
+	}
+
+int main(){
+	    
+	    sstf obj;
+		obj.getdata();	
+        obj.move();
+		return 0;    
+        }
